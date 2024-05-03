@@ -6,70 +6,69 @@
     <title>内职 广告</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Sets the font family for the entire document */
-            margin: 0; /* Removes default margin */
-            padding: 0; /* Removes default padding */
-            display: flex; /* Uses flexbox layout */
-            justify-content: center; /* Centers content horizontally */
-            align-items: center; /* Centers content vertically */
-            height: 100vh; /* Sets the height of the body to 100% of the viewport height */
-            background-image: url('images/background1.jpg'); /* Sets background image */
-            background-size: cover; /* Covers the entire background with the image */
+            font-family: Arial, sans-serif; /* 设置整个文档的字体 */
+            margin: 0; /* 去除默认边距 */
+            padding: 0; /* 去除默认填充 */
+            display: flex; /* 使用 flexbox 布局 */
+            justify-content: center; /* 水平居中内容 */
+            align-items: center; /* 垂直居中内容 */
+            height: 100vh; /* 设置 body 的高度为视口高度的 100% */
+            background-image: url('images/background1.jpg'); /* 设置背景图像 */
+            background-size: cover; /* 用图像覆盖整个背景 */
         }
 
         .login-container {
-            background-color: rgba(255, 255, 255, 0.3); /* Sets background color with opacity */
-            border-radius: 8px; /* Rounds corners of the container */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adds a shadow effect */
-            padding: 20px; /* Adds padding inside the container */
-            width: 300px; /* Sets the width of the container */
+            background-color: rgba(255, 255, 255, 0.3); /* 设置背景色并加入透明度 */
+            border-radius: 8px; /* 圆角容器 */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+            padding: 20px; /* 容器内填充 */
+            width: 300px; /* 容器宽度 */
         }
 
         #login-title {
-            font-size: 24px; /* Sets font size */
-            margin-bottom: 20px; /* Adds margin bottom */
-            text-align: center; /* Centers text horizontally */
-            color: red; /* Sets text color */
+            font-size: 24px; /* 设置字体大小 */
+            margin-bottom: 20px; /* 底部边距 */
+            text-align: center; /* 文字居中 */
+            color: red; /* 文字颜色 */
         }
 
         input[type="text"],
         input[type="password"] {
-            width: 100%; /* Sets the width of text input fields */
-            padding: 10px; /* Adds padding inside text input fields */
-            margin-bottom: 15px; /* Adds margin bottom to create space between input fields */
-            border: 1px solid #ccc; /* Sets border color and style */
-            border-radius: 5px; /* Rounds corners of the input fields */
-            box-sizing: border-box; /* Includes padding and border in the width */
+            width: 100%; /* 文本输入字段的宽度 */
+            padding: 10px; /* 内部填充 */
+            margin-bottom: 15px; /* 底部边距 */
+            border: 1px solid #ccc; /* 设置边框颜色和样式 */
+            border-radius: 5px; /* 圆角 */
+            box-sizing: border-box; /* 包含宽度 */
         }
 
         input[type="submit"] {
-            width: 100%; /* Sets the width of the submit button */
-            padding: 10px; /* Adds padding inside the button */
-            border: none; /* Removes border */
-            border-radius: 5px; /* Rounds corners of the button */
-            background-color: #0078d7; /* Sets background color of the button */
-            color: #fff; /* Sets text color of the button */
-            font-size: 16px; /* Sets font size of the button text */
-            cursor: pointer; /* Changes cursor to pointer on hover */
+            width: 100%; /* 提交按钮的宽度 */
+            padding: 10px; /* 内部填充 */
+            border: none; /* 去除边框 */
+            border-radius: 5px; /* 圆角 */
+            background-color: #0078d7; /* 按钮背景颜色 */
+            color: #fff; /* 按钮文字颜色 */
+            font-size: 16px; /* 按钮文字大小 */
+            cursor: pointer; /* 鼠标悬停时变成手指指针 */
         }
-      
 
         input[type="submit"]:hover {
-            background-color: #005fba; /* Changes background color on hover */
+            background-color: #005fba; /* 悬停时改变背景颜色 */
         }
 
         #register-link {
-            text-align: center; /* Centers text horizontally */
-            margin-top: 10px; /* Adds margin top */
+            text-align: center; /* 文字居中 */
+            margin-top: 10px; /* 顶部边距 */
         }
 
         #register-link a {
-            color: #0078d7; /* Sets text color of the registration link */
-            text-decoration: none; /* Removes underline from the link */
+            color: orange; /* 将链接颜色改为橙色 */
+            text-decoration: none; /* 删除下划线 */
         }
 
         #register-link a:hover {
-            text-decoration: underline; /* Underlines the link on hover */
+            text-decoration: underline; /* 悬停时添加下划线 */
         }
     </style>
 </head>
@@ -78,12 +77,18 @@
         <h1 id="login-title">内职 广告</h1>
         <form>
             <input type="text" id="username" placeholder="账号：" pattern="(?=.*[A-Za-z])(?=.*\d).{8,}" title="请输入8个字符，至少有一个英文字母和数字" required>
-            <input type="password" id="password" placeholder="密码：" placeholder="Password" pattern="[A-Za-z0-9]{8,}" title="请输入8个字符，数字或英文字母"required>
+            <input type="password" id="password" placeholder="密码：" pattern="[A-Za-z0-9]{8,}" title="请输入8个字符，数字或英文字母"required>
             <input type="submit" value="登录">
         </form>
         <div id="register-link">
             没有账户? <a href="https://mydewang.github.io/zhuce/">注册</a>
         </div>
     </div>
+    <script>
+      document.querySelector("form").addEventListener("submit", function(event) {
+          event.preventDefault(); // 阻止默认的表单提交行为
+          window.location.href = "https://mydewang.github.io/gg/"; // 跳转到指定链接
+      });
+  </script>
 </body>
 </html>
